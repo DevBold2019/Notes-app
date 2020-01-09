@@ -38,7 +38,6 @@ class AddNoteActivity : AppCompatActivity() {
 
 
             R.id.save_note -> {
-
                 saveNote()
                 true
             }

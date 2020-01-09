@@ -26,17 +26,13 @@ abstract class NoteDatabase : RoomDatabase() {
 
                 synchronized(NoteDatabase::class) {
 
-                    instance = Room.databaseBuilder(context.applicationContext, NoteDatabase::class.java, "notes_database")
-                        .fallbackToDestructiveMigration().addCallback(roomCallback).build()
+                    instance = Room.databaseBuilder(context.applicationContext, NoteDatabase::class.java, "notes_database").fallbackToDestructiveMigration().addCallback(roomCallback).build()
+
                 }
+
             }
             return instance
         }
-
-        fun destroyInstance() {
-            instance = null
-        }
-
         private val roomCallback = object : RoomDatabase.Callback() {
             override fun onCreate(db: SupportSQLiteDatabase) {
                 super.onCreate(db)
@@ -51,24 +47,11 @@ abstract class NoteDatabase : RoomDatabase() {
 
         override fun doInBackground(vararg p0: Unit?) {
 
-            noteDao?.insert(
-                Note(
-                    "Title 1",
-                    "description 1"
-                )
-            )
-            noteDao?.insert(
-                Note(
-                    "Title 2",
-                    "description 2"
-                )
-            )
-            noteDao?.insert(
-                Note(
-                    "Title 3",
-                    "description 3"
-                )
-            )
+            noteDao?.insert(Note("Title 1", "description 1"))
+            noteDao?.insert(Note("Title 2", "description 2"))
+            noteDao?.insert(Note("Title 3", "description 3"))
+
+
         }
     }
 

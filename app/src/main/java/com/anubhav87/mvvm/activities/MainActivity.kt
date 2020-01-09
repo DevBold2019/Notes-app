@@ -42,8 +42,7 @@ class MainActivity : AppCompatActivity() {
 
         noteViewModel = ViewModelProviders.of(this).get(NoteViewModel::class.java)
 
-        noteViewModel.getAllNotes().observe(this, Observer<List<Note>> {
-                e -> adapter.setNotes(e!!) })
+        noteViewModel.getAllNotes().observe(this, Observer<List<Note>> { e -> adapter.setNotes(e!!) })
 
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -72,10 +71,7 @@ class MainActivity : AppCompatActivity() {
 
         if (!(requestCode != ADD_NOTE_REQUEST || resultCode != Activity.RESULT_OK)) {
 
-            val newNote = Note(
-                data!!.getStringExtra(AddNoteActivity.EXTRA_TITLE),
-                data.getStringExtra(AddNoteActivity.EXTRA_DESCRIPTION)
-            )
+            val newNote = Note(data!!.getStringExtra(AddNoteActivity.EXTRA_TITLE), data.getStringExtra(AddNoteActivity.EXTRA_DESCRIPTION))
 
             noteViewModel.insert(newNote)
 
