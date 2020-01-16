@@ -1,16 +1,15 @@
-package com.anubhav87.mvvm
+package com.anubhav87.notesApp
 
 import android.app.Application
 import android.arch.lifecycle.LiveData
 import android.os.AsyncTask
-import com.anubhav87.mvvm.db.NoteDatabase
-import com.anubhav87.mvvm.db.dao.NoteDao
-import com.anubhav87.mvvm.activities.Model.Note
+import com.anubhav87.notesApp.db.NoteDatabase
+import com.anubhav87.notesApp.db.dao.NoteDao
+import com.anubhav87.notesApp.activities.Model.Note
 
 class NoteRepository(application: Application) {
 
     private var noteDao: NoteDao
-
     private var allNotes: LiveData<List<Note>>
 
     init {

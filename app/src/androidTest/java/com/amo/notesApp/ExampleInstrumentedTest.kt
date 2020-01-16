@@ -1,4 +1,4 @@
-package com.anubhav87.mvvm
+package com.anubhav87.notesApp
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

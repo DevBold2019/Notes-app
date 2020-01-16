@@ -1,4 +1,4 @@
-package com.anubhav87.mvvm.activities.Model
+package com.anubhav87.notesApp.activities.Model
 
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey

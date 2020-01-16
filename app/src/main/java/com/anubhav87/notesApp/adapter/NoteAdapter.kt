@@ -1,4 +1,4 @@
-package com.anubhav87.mvvm.adapter
+package com.anubhav87.notesApp.adapter
 
 
 import android.widget.TextView
@@ -6,8 +6,8 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.anubhav87.mvvm.R
-import com.anubhav87.mvvm.activities.Model.Note
+import com.anubhav87.notesApp.R
+import com.anubhav87.notesApp.activities.Model.Note
 
  class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteHolder>() {
 

@@ -1,4 +1,4 @@
-package com.anubhav87.mvvm
+package com.anubhav87.notesApp
 
 import org.junit.Test
 

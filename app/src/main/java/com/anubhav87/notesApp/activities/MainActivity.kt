@@ -1,20 +1,20 @@
-package com.anubhav87.mvvm.activities
+package com.anubhav87.notesApp.activities
 
 import android.app.Activity
 import android.arch.lifecycle.Observer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.anubhav87.mvvm.viewmodel.NoteViewModel
+import com.anubhav87.notesApp.viewmodel.NoteViewModel
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
-import com.anubhav87.mvvm.adapter.NoteAdapter
+import com.anubhav87.notesApp.adapter.NoteAdapter
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import com.anubhav87.mvvm.R
-import com.anubhav87.mvvm.activities.Model.Note
+import com.anubhav87.notesApp.R
+import com.anubhav87.notesApp.activities.Model.Note
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -42,7 +42,9 @@ class MainActivity : AppCompatActivity() {
 
         noteViewModel = ViewModelProviders.of(this).get(NoteViewModel::class.java)
 
-        noteViewModel.getAllNotes().observe(this, Observer<List<Note>> { e -> adapter.setNotes(e!!) })
+        noteViewModel.getAllNotes().observe(this, Observer<List<Note>> { f -> adapter.setNotes(f!!) })
+
+
 
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

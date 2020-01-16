@@ -1,4 +1,4 @@
-package com.anubhav87.mvvm.db
+package com.anubhav87.notesApp.db
 
 
 import android.arch.persistence.db.SupportSQLiteDatabase
@@ -7,8 +7,8 @@ import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
 import android.content.Context
 import android.os.AsyncTask
-import com.anubhav87.mvvm.db.dao.NoteDao
-import com.anubhav87.mvvm.activities.Model.Note
+import com.anubhav87.notesApp.db.dao.NoteDao
+import com.anubhav87.notesApp.activities.Model.Note
 
 @Database(entities = [Note::class], version = 1)
 
@@ -47,7 +47,7 @@ abstract class NoteDatabase : RoomDatabase() {
 
         override fun doInBackground(vararg p0: Unit?) {
 
-            noteDao?.insert(Note("Title 1", "description 1"))
+            noteDao?.insert(Note("Sample Title", "description 1"))
             noteDao?.insert(Note("Title 2", "description 2"))
             noteDao?.insert(Note("Title 3", "description 3"))
 
